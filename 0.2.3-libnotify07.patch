@@ -1,0 +1,15 @@
+--- origsrc/gnac-0.2.3/src/gnac-ui.c	2011-04-24 03:16:53.000000000 -0500
++++ src/gnac-0.2.3/src/gnac-ui.c	2011-07-06 20:06:16.971057100 -0500
+@@ -802,8 +802,12 @@ gnac_ui_notify(const gchar *msg)
+ 
+   NotifyNotification *notification;
+ 
++#if NOTIFY_CHECK_VERSION(0,7,0)
++  notification = notify_notification_new(PACKAGE_NAME, msg, PACKAGE);
++#else
+   notification = notify_notification_new(PACKAGE_NAME, msg, PACKAGE, NULL);
+   notify_notification_attach_to_status_icon(notification, trayicon);
++#endif
+ 
+   notify_notification_set_timeout(notification, NOTIFY_EXPIRES_DEFAULT);
+   notify_notification_set_urgency(notification, NOTIFY_URGENCY_NORMAL);

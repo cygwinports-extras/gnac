@@ -1,0 +1,19 @@
+--- origsrc/gnac-0.2.3/src/Makefile.am	2011-03-07 18:13:44.000000000 -0600
++++ src/gnac-0.2.3/src/Makefile.am	2011-07-06 19:34:02.381759100 -0500
+@@ -72,8 +72,7 @@ gnac_CFLAGS = \
+ 	$(NOTIFY_CFLAGS) \
+ 	$(UI_CFLAGS) \
+ 	$(UNIQUE_CFLAGS) \
+-	$(WARN_CFLAGS) \
+-	-Wl,--export-dynamic
++	$(WARN_CFLAGS)
+ 		
+ gnac_LDADD = \
+ 	$(top_builddir)/libgnac/libgnac.la \
+@@ -84,5 +83,5 @@ gnac_LDADD = \
+ 	$(UNIQUE_LIBS)
+ 
+ gnac_LDFLAGS = \
+-	-Wl,--export-dynamic \
++	-export-dynamic \
+ 	$(AM_LDFLAGS)

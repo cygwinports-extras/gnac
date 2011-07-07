@@ -1,0 +1,8 @@
+inherit gnome2
+
+DESCRIPTION="GNOME GStreamer audio converter"
+HOMEPAGE="http://gnac.sourceforge.net/"
+SRC_URI="mirror://sourceforge/gnac/${P}.tar.bz2"
+
+PATCH_URI="0.2.3-export-dynamic.patch
+           0.2.3-libnotify07.patch"
