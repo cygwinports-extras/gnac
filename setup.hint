@@ -1,6 +1,0 @@
-category: Audio
-requires: libgdk_pixbuf2.0_0 libglib2.0_0 libgstinterfaces0.10_0 libgstreamer0.10_0 libgtk3_0 libintl8 libnotify4 libunique3.0_0 libxml2
-sdesc: "GNOME GStreamer audio converter"
-ldesc: "Gnac is an easy to use audio conversion program for the Gnome 
-desktop. It is designed to be powerful but simple! It provides easy 
-audio files conversion between all GStreamer supported audio formats."
